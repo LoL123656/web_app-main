@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Список фильмов</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <!-- Ссылки на главную страницу и страницу фильмов -->
+    <a href="http://127.0.0.1:5000">Главная</a>
+    <a href="http://127.0.0.1:5000/film_form">Добавить фильм</a>
+    <a href="http://127.0.0.1:5000/films">Фильмы</a>
+    <!-- Ссылка на страницу конкретного фильма, в данном случае фильм с id 3 -->
+    <a href="http://127.0.0.1:5000/film/3">Фильм 3 (служебная)</a>
+
+    <!-- Заголовок страницы -->
+    <h1>Фильмы</h1>
+
+    <!-- Таблица для вывода списка фильмов -->
+    <table border="1">
+      <!-- Заголовок таблицы -->
+      <tr>
+        <th>Название</th>
+        <th>Год</th>
+        <th>Рейтинг</th>
+        <th>Жанр</th>
+      </tr>
+      <!-- Строки таблицы, содержащие информацию о фильмах -->
+       {% for film in films %}
+      <tr class="tr_films">
+        <td>{{film.name}}</td>
+        <td>{{film.year}}</td>
+        <td>{{film.rating}}</td>
+        <td>{{film.genre}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+
+    <!-- Вывод изображения -->
+    <img src="https://cdn.culture.ru/images/850320f4-dc17-5a3b-aad4-8da56bb2a090" width="100" height="100">
+    <img src="static/img/film.jpg"
+  </body>
+</html>

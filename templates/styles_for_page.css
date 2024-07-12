@@ -1,0 +1,26 @@
+h1{
+    font-size: 10px ;
+}
+
+.header{
+    color: aqua;
+}
+#fd{
+    text-decoration:line-through;
+}
+#fd2{
+    font-style:oblique;
+}
+
+p{
+    color: #6c1919; ;
+    font-style: italic
+}
+
+.products {
+    text-decoration: underline;
+}
+.facts {
+    text-decoration: overline;
+}
+    
